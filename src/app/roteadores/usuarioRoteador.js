@@ -5,7 +5,7 @@ const auth = require('../util/jwt-util')
 module.exports= async (app)=>{
 
     app.get('/', (req, res) => {
-        res.end('Estou no root da pagina no heroku !!!');
+        res.end('Estou no root da pagina no local!!!');
     })
     
     app.get('/usuario/listagem',  auth, await usuarioControlador.listagem())
